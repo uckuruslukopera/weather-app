@@ -3,7 +3,7 @@ const config = require('../config/config');
 
 const host = config.geocode.host;
 
-const geocodeAddress = (addressOption, cb) => {
+const geocodeAddress = (addressOption) => {
     const encodedAddress = encodeURIComponent(addressOption);
     const options = {
         url: `${host}/${config.geocode.address}`,

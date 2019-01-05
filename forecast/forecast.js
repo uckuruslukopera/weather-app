@@ -5,7 +5,7 @@ const host = config.forecast.host;
 
 
 
-const getForecast = (lattidue, longtitude, cb) => {
+const getForecast = (lattidue, longtitude) => {
     const options = {
         url: `${host}/${config.forecast.forecast}/${config.forecast.key}/${lattidue},${longtitude}`,
         exclude: 'minutely,hourly,daily,alerts,flags',
@@ -23,11 +23,6 @@ const getForecast = (lattidue, longtitude, cb) => {
     });
 }
 
-const convertFahrenheitToCelcius = (fahrenheit) => {
-    return (fahrenheit - 32) * 5 / 9;
-}
-
 module.exports = {
-    getForecast,
-    convertFahrenheitToCelcius
+    getForecast
 };

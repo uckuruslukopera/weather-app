@@ -1,6 +1,7 @@
 const yargs = require('yargs');
 const geocode = require('./geocode/geocode');
 const forecast = require('./forecast/forecast');
+const utilities = require('./utilities/utilities');
 
 const argsv = yargs.options({
     a: {
@@ -35,7 +36,7 @@ geocode.geocodeAddress(argsv.address)
         return forecast.getForecast(geocodeResult.lattitude, geocodeResult.longtitude);
     }).then((forecastResult) => {
         console.log('Current status: ' + forecastResult.currently.summary);
-        console.log('Current temperature: ' + Math.floor(forecast.convertFahrenheitToCelcius(forecastResult.currently.temperature)));
+        console.log('Current temperature: ' + Math.floor(utilities.convertFahrenheitToCelcius(forecastResult.currently.temperature)));
     }).catch(reason => console.log(reason));
 
 
