@@ -2,7 +2,7 @@
   "name": "weather-app",
   "version": "1.0.0",
   "description": "Weather or not",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/uckuruslukopera/weather-app/issues"
   },
-  "homepage": "https://github.com/uckuruslukopera/weather-app#readme"
+  "homepage": "https://github.com/uckuruslukopera/weather-app#readme",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "request": "^2.88.0",
+    "yargs": "^12.0.5"
+  }
 }
